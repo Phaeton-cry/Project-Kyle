@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Portal Concept Demo | Kyle Jess F. Salazar</title>
+  <meta name="description" content="A front-end concept demo of a student portal for CvSU Bacoor City Campus, built by Kyle Jess F. Salazar. Uses sample data only.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portal.css">
+</head>
+<body>
+  <div class="demo-banner" role="note">
+    <span><strong>Portfolio concept demo.</strong> Not affiliated with or endorsed by Cavite State University. All names, grades and schedules are sample data, and nothing you type is sent anywhere.</span>
+    <a href="../index.html#projects">← Back to portfolio</a>
+  </div>
+
+  <!-- ============ LOGIN ============ -->
+  <main id="login" class="login">
+    <section class="login-side" aria-hidden="true">
+      <img src="../assets/img/logo.svg" alt="" width="64" height="64">
+      <h1>Student Portal<br><em>Concept</em></h1>
+      <p>Grades, schedules, enrollment and announcements in one place, designed for students of CvSU Bacoor City Campus.</p>
+      <ul>
+        <li>View grades and print your COG</li>
+        <li>Check your class schedule</li>
+        <li>Pre-enroll for next semester</li>
+      </ul>
+    </section>
+    <section class="login-card">
+      <h2>Sign in</h2>
+      <p class="muted">Use the demo account to explore the student view.</p>
+      <form id="loginForm" novalidate>
+        <div class="field">
+          <label for="studNo">Student number</label>
+          <input id="studNo" name="studNo" inputmode="numeric" autocomplete="off" placeholder="e.g. 202310123" required>
+        </div>
+        <div class="field">
+          <label for="pass">Password</label>
+          <input id="pass" name="pass" type="password" autocomplete="off" placeholder="••••••••" required>
+        </div>
+        <p class="form-error" id="loginError" role="alert"></p>
+        <button class="btn primary" type="submit">Sign in</button>
+        <button class="btn ghost" type="button" id="fillDemo">Use demo account</button>
+        <button class="link" type="button" id="forgot">Forgot password?</button>
+      </form>
+      <div class="hint">
+        <strong>Demo account</strong>
+        Student no. <code>202310123</code> · Password <code>demo2026</code>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ APP ============ -->
+  <div id="app" class="app" hidden>
+    <aside class="sidebar">
+      <div class="side-brand">
+        <img src="../assets/img/logo.svg" alt="" width="36" height="36">
+        <span>Student Portal<small>Concept demo</small></span>
+      </div>
+      <nav aria-label="Portal">
+        <button data-view="dashboard" class="active">Dashboard</button>
+        <button data-view="grades">Grades</button>
+        <button data-view="schedule">Class schedule</button>
+        <button data-view="enrollment">Enrollment</button>
+        <button data-view="announcements">Announcements</button>
+        <button data-view="profile">Profile</button>
+        <button id="logout" class="logout">Log out</button>
+      </nav>
+    </aside>
+
+    <div class="main">
+      <header class="app-head">
+        <div>
+          <p class="crumb" id="crumb">Dashboard</p>
+          <h1 id="viewTitle">Good day, Juan!</h1>
+        </div>
+        <div class="who">
+          <span class="avatar">JD</span>
+          <span><strong>Juan Dela Cruz</strong><small>BSIT · 3rd year · 202310123</small></span>
+        </div>
+      </header>
+
+      <!-- Dashboard -->
+      <section class="view" data-view="dashboard">
+        <div class="stats">
+          <div class="stat"><small>General weighted average</small><strong id="statGwa">—</strong><span>1st Sem, A.Y. 2025–2026</span></div>
+          <div class="stat"><small>Units enrolled</small><strong>15</strong><span>5 subjects this semester</span></div>
+          <div class="stat"><small>Enrollment status</small><strong id="statEnroll">Enrolled</strong><span id="statEnrollSub">2nd Sem, A.Y. 2025–2026</span></div>
+          <div class="stat"><small>New announcements</small><strong>3</strong><span>This week</span></div>
+        </div>
+        <div class="split">
+          <div class="panel">
+            <h2>Today's classes</h2>
+            <ul class="list" id="todayList"></ul>
+          </div>
+          <div class="panel">
+            <h2>Latest announcements</h2>
+            <ul class="list" id="miniNews"></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Grades -->
+      <section class="view" data-view="grades" hidden>
+        <div class="panel">
+          <div class="panel-head">
+            <label class="select">Semester
+              <select id="semSelect">
+                <option value="1-2526">1st Sem, A.Y. 2025–2026</option>
+                <option value="2-2425">2nd Sem, A.Y. 2024–2025</option>
+              </select>
+            </label>
+            <button class="btn primary" id="printCog">Print certificate of grades</button>
+          </div>
+          <div class="table-wrap" id="cog">
+            <div class="cog-head">
+              <strong>Certificate of Grades (sample)</strong>
+              <span>Juan Dela Cruz · 202310123 · BS Information Technology</span>
+              <span id="cogSem"></span>
+            </div>
+            <table>
+              <thead><tr><th>Code</th><th>Subject</th><th>Units</th><th>Grade</th><th>Remarks</th></tr></thead>
+              <tbody id="gradeBody"></tbody>
+              <tfoot><tr><td colspan="2">General weighted average</td><td id="unitTotal"></td><td id="gwa" colspan="2"></td></tr></tfoot>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Schedule -->
+      <section class="view" data-view="schedule" hidden>
+        <div class="panel">
+          <h2>Class schedule · 2nd Sem, A.Y. 2025–2026</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Day</th><th>Time</th><th>Code</th><th>Subject</th><th>Room</th><th>Instructor</th></tr></thead>
+              <tbody id="schedBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Enrollment -->
+      <section class="view" data-view="enrollment" hidden>
+        <div class="split">
+          <div class="panel">
+            <h2>Enrollment status</h2>
+            <ol class="timeline" id="timeline"></ol>
+          </div>
+          <div class="panel">
+            <h2>Pre-enroll subjects · 1st Sem, A.Y. 2026–2027</h2>
+            <p class="muted small">Pick your subjects (max 24 units). The registrar reviews and approves your request.</p>
+            <form id="preForm">
+              <ul class="checks" id="preList"></ul>
+              <div class="pre-foot">
+                <span>Total units: <strong id="preUnits">0</strong> / 24</span>
+                <button class="btn primary" type="submit">Submit pre-enrollment</button>
+              </div>
+              <p class="form-error" id="preError" role="alert"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Announcements -->
+      <section class="view" data-view="announcements" hidden>
+        <div class="panel">
+          <div class="panel-head">
+            <div class="filters" role="group" aria-label="Filter announcements">
+              <button class="chip active" data-filter="all">All</button>
+              <button class="chip" data-filter="Academic">Academic</button>
+              <button class="chip" data-filter="Registrar">Registrar</button>
+              <button class="chip" data-filter="Campus">Campus</button>
+            </div>
+          </div>
+          <ul class="news" id="newsList"></ul>
+        </div>
+      </section>
+
+      <!-- Profile -->
+      <section class="view" data-view="profile" hidden>
+        <div class="panel">
+          <h2>My profile</h2>
+          <form id="profileForm" class="profile-grid">
+            <div class="field"><label>Full name</label><input value="Juan Dela Cruz" disabled></div>
+            <div class="field"><label>Program</label><input value="BS Information Technology" disabled></div>
+            <div class="field"><label for="pEmail">Email</label><input id="pEmail" type="email" value="juan.delacruz@example.com" required></div>
+            <div class="field"><label for="pPhone">Mobile number</label><input id="pPhone" value="0917 000 0000" pattern="[0-9 +]{10,15}" required></div>
+            <div class="field wide"><label for="pAddr">Address</label><input id="pAddr" value="Bacoor City, Cavite" required></div>
+            <div class="wide"><button class="btn primary" type="submit">Save changes</button></div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="portal.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1110" viewBox="0 0 1440 1110" font-family="Inter, DejaVu Sans, sans-serif">
+<defs><marker id="open" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" orient="auto"><path d="M1 1 L11 6 L1 11" fill="none" stroke="#0A3F26" stroke-width="1.6"/></marker></defs>
+<rect width="1440" height="1110" fill="#FBF8F1"/>
+<text x="40" y="44" font-family="Lora, DejaVu Serif, serif" font-size="26" fill="#0A3F26" font-weight="600">Use Case Diagram — CvSU Bacoor Student Portal</text>
+<text x="40" y="70" font-size="13" fill="#6B6A5E">Portfolio demo project · Kyle Jess F. Salazar</text>
+<rect x="350" y="95" width="800" height="975" rx="18" fill="#F7F1E3" stroke="#0E5A36" stroke-width="2"/>
+<text x="750.0" y="129" text-anchor="middle" font-family="Lora, DejaVu Serif, serif" font-size="18" font-weight="600" fill="#0A3F26">«system» CvSU Bacoor Student Portal</text>
+<line x1="158.0" y1="510.0" x2="378.0" y2="180.0" stroke="#1F2A24" stroke-width="1.5"/>
+<line x1="158.0" y1="510.0" x2="378.0" y2="270.0" stroke="#1F2A24" stroke-width="1.5"/>
+<line x1="158.0" y1="510.0" x2="378.0" y2="360.0" stroke="#1F2A24" stroke-width="1.5"/>
+<line x1="158.0" y1="510.0" x2="378.0" y2="660.0" stroke="#1F2A24" stroke-width="1.5"/>
+<line x1="158.0" y1="510.0" x2="378.0" y2="750.0" stroke="#1F2A24" stroke-width="1.5"/>
+<line x1="158.0" y1="510.0" x2="378.0" y2="840.0" stroke="#1F2A24" stroke-width="1.5"/>
+<line x1="158.0" y1="510.0" x2="378.0" y2="930.0" stroke="#1F2A24" stroke-width="1.5"/>
+<line x1="158.0" y1="510.0" x2="638.0" y2="510.0" stroke="#1F2A24" stroke-width="1.5"/>
+<line x1="1302.0" y1="270.0" x2="1122.0" y2="180.0" stroke="#1F2A24" stroke-width="1.5"/>
+<line x1="1302.0" y1="270.0" x2="1122.0" y2="270.0" stroke="#1F2A24" stroke-width="1.5"/>
+<line x1="1302.0" y1="270.0" x2="1122.0" y2="335.0" stroke="#1F2A24" stroke-width="1.5"/>
+<line x1="1302.0" y1="830.0" x2="1122.0" y2="745.0" stroke="#1F2A24" stroke-width="1.5"/>
+<line x1="1302.0" y1="830.0" x2="1122.0" y2="835.0" stroke="#1F2A24" stroke-width="1.5"/>
+<line x1="1302.0" y1="830.0" x2="1122.0" y2="925.0" stroke="#1F2A24" stroke-width="1.5"/>
+<line x1="1302.0" y1="830.0" x2="1122.0" y2="1015.0" stroke="#1F2A24" stroke-width="1.5"/>
+<line x1="1302.0" y1="270.0" x2="862.0" y2="510.0" stroke="#1F2A24" stroke-width="1.5"/>
+<line x1="1302.0" y1="830.0" x2="862.0" y2="510.0" stroke="#1F2A24" stroke-width="1.5"/>
+<line x1="681.5" y1="246.3" x2="558.5" y2="203.7" stroke="#0A3F26" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<text x="672.0" y="229.0" text-anchor="middle" font-size="12.5" font-style="italic" fill="#0A3F26">«extend»</text>
+<line x1="750.0" y1="420.0" x2="750.0" y2="480.0" stroke="#0A3F26" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<text x="802.0" y="454.0" text-anchor="middle" font-size="12.5" font-style="italic" fill="#0A3F26">«extend»</text>
+<line x1="750.0" y1="540.0" x2="750.0" y2="620.0" stroke="#0A3F26" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<text x="802.0" y="584.0" text-anchor="middle" font-size="12.5" font-style="italic" fill="#0A3F26">«include»</text>
+<ellipse cx="490" cy="180" rx="112" ry="30" fill="#FFFFFF" stroke="#0E5A36" stroke-width="2"/>
+<text x="490" y="185" text-anchor="middle" font-size="14" fill="#1F2A24" font-weight="500">View Grades</text>
+<ellipse cx="490" cy="270" rx="112" ry="30" fill="#FFFFFF" stroke="#0E5A36" stroke-width="2"/>
+<text x="490" y="275" text-anchor="middle" font-size="14" fill="#1F2A24" font-weight="500">View Class Schedule</text>
+<ellipse cx="490" cy="360" rx="112" ry="30" fill="#FFFFFF" stroke="#0E5A36" stroke-width="2"/>
+<text x="490" y="365" text-anchor="middle" font-size="14" fill="#1F2A24" font-weight="500">Check Enrollment Status</text>
+<ellipse cx="490" cy="660" rx="112" ry="30" fill="#FFFFFF" stroke="#0E5A36" stroke-width="2"/>
+<text x="490" y="665" text-anchor="middle" font-size="14" fill="#1F2A24" font-weight="500">Pre-Enroll Subjects</text>
+<ellipse cx="490" cy="750" rx="112" ry="30" fill="#FFFFFF" stroke="#0E5A36" stroke-width="2"/>
+<text x="490" y="755" text-anchor="middle" font-size="14" fill="#1F2A24" font-weight="500">View Announcements</text>
+<ellipse cx="490" cy="840" rx="112" ry="30" fill="#FFFFFF" stroke="#0E5A36" stroke-width="2"/>
+<text x="490" y="845" text-anchor="middle" font-size="14" fill="#1F2A24" font-weight="500">Manage Profile</text>
+<ellipse cx="490" cy="930" rx="112" ry="30" fill="#FFFFFF" stroke="#0E5A36" stroke-width="2"/>
+<text x="490" y="935" text-anchor="middle" font-size="14" fill="#1F2A24" font-weight="500">Log Out</text>
+<ellipse cx="750" cy="270" rx="112" ry="30" fill="#FFFFFF" stroke="#0E5A36" stroke-width="2"/>
+<text x="750" y="275" text-anchor="middle" font-size="14" fill="#1F2A24" font-weight="500">Print Certificate of Grades</text>
+<ellipse cx="750" cy="390" rx="112" ry="30" fill="#FFFFFF" stroke="#0E5A36" stroke-width="2"/>
+<text x="750" y="395" text-anchor="middle" font-size="14" fill="#1F2A24" font-weight="500">Reset Password</text>
+<ellipse cx="750" cy="510" rx="112" ry="30" fill="#FFFFFF" stroke="#0E5A36" stroke-width="2"/>
+<text x="750" y="515" text-anchor="middle" font-size="14" fill="#1F2A24" font-weight="500">Log In</text>
+<ellipse cx="750" cy="650" rx="112" ry="30" fill="#FFFFFF" stroke="#0E5A36" stroke-width="2"/>
+<text x="750" y="655" text-anchor="middle" font-size="14" fill="#1F2A24" font-weight="500">Verify Credentials</text>
+<ellipse cx="1010" cy="180" rx="112" ry="30" fill="#FFFFFF" stroke="#0E5A36" stroke-width="2"/>
+<text x="1010" y="185" text-anchor="middle" font-size="14" fill="#1F2A24" font-weight="500">View Class List</text>
+<ellipse cx="1010" cy="270" rx="112" ry="30" fill="#FFFFFF" stroke="#0E5A36" stroke-width="2"/>
+<text x="1010" y="275" text-anchor="middle" font-size="14" fill="#1F2A24" font-weight="500">Encode Grades</text>
+<ellipse cx="1010" cy="335" rx="112" ry="30" fill="#FFFFFF" stroke="#0E5A36" stroke-width="2"/>
+<text x="1010" y="340" text-anchor="middle" font-size="14" fill="#1F2A24" font-weight="500">Post Announcements</text>
+<ellipse cx="1010" cy="745" rx="112" ry="30" fill="#FFFFFF" stroke="#0E5A36" stroke-width="2"/>
+<text x="1010" y="750" text-anchor="middle" font-size="14" fill="#1F2A24" font-weight="500">Approve Enrollment</text>
+<ellipse cx="1010" cy="835" rx="112" ry="30" fill="#FFFFFF" stroke="#0E5A36" stroke-width="2"/>
+<text x="1010" y="840" text-anchor="middle" font-size="14" fill="#1F2A24" font-weight="500">Manage Student Records</text>
+<ellipse cx="1010" cy="925" rx="112" ry="30" fill="#FFFFFF" stroke="#0E5A36" stroke-width="2"/>
+<text x="1010" y="930" text-anchor="middle" font-size="14" fill="#1F2A24" font-weight="500">Manage Courses &amp; Schedules</text>
+<ellipse cx="1010" cy="1015" rx="112" ry="30" fill="#FFFFFF" stroke="#0E5A36" stroke-width="2"/>
+<text x="1010" y="1020" text-anchor="middle" font-size="14" fill="#1F2A24" font-weight="500">Manage User Accounts</text>
+<g stroke="#0A3F26" stroke-width="2.4" fill="none" stroke-linecap="round"><circle cx="130" cy="462" r="16" fill="#C9A96E"/><line x1="130" y1="478" x2="130" y2="528"/><line x1="102" y1="498" x2="158" y2="498"/><line x1="130" y1="528" x2="108" y2="566"/><line x1="130" y1="528" x2="152" y2="566"/></g>
+<text x="130" y="592" text-anchor="middle" font-size="16" font-weight="700" fill="#0A3F26">Student</text>
+<g stroke="#0A3F26" stroke-width="2.4" fill="none" stroke-linecap="round"><circle cx="1330" cy="222" r="16" fill="#C9A96E"/><line x1="1330" y1="238" x2="1330" y2="288"/><line x1="1302" y1="258" x2="1358" y2="258"/><line x1="1330" y1="288" x2="1308" y2="326"/><line x1="1330" y1="288" x2="1352" y2="326"/></g>
+<text x="1330" y="352" text-anchor="middle" font-size="16" font-weight="700" fill="#0A3F26">Faculty</text>
+<g stroke="#0A3F26" stroke-width="2.4" fill="none" stroke-linecap="round"><circle cx="1330" cy="782" r="16" fill="#C9A96E"/><line x1="1330" y1="798" x2="1330" y2="848"/><line x1="1302" y1="818" x2="1358" y2="818"/><line x1="1330" y1="848" x2="1308" y2="886"/><line x1="1330" y1="848" x2="1352" y2="886"/></g>
+<text x="1330" y="912" text-anchor="middle" font-size="16" font-weight="700" fill="#0A3F26">Registrar / Admin</text>
+<g font-size="12.5" fill="#1F2A24"><text x="40" y="1000" font-weight="700" fill="#0A3F26">Legend</text>
+<line x1="40" y1="1020" x2="90" y2="1020" stroke="#1F2A24" stroke-width="1.5"/><text x="100" y="1024">Association</text>
+<line x1="40" y1="1044" x2="90" y2="1044" stroke="#0A3F26" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#open)"/><text x="100" y="1048">«include» / «extend»</text></g>
+</svg>
